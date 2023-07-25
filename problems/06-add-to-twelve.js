@@ -12,7 +12,24 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
-// your code here
+function addToTwelve (array) {
+  let i = array.length;
+  let rtnVal;
+
+  if (array[0] + array[1] === 12) {
+      rtnVal = true;
+  }
+  else {
+      if (i >= 2) {
+          rtnVal = addToTwelve(array.slice(1));
+      }
+      else {
+          rtnVal = false;
+      }
+  }
+
+  return rtnVal;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

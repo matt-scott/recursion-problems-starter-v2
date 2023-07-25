@@ -13,7 +13,22 @@ iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
 
-// your code here
+function iceCreamShop (flavors, favorite) {
+  debugger
+  let flag;
+  if (flavors.length === 0) {
+      flag = false;
+      return flag;
+  }
+
+  if (flavors[0].includes(favorite)) {
+      flag = true;
+  }
+  else {
+      flag = iceCreamShop(flavors.slice(1), favorite);
+  }
+  return flag;
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
