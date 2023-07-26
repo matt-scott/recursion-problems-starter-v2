@@ -1,29 +1,26 @@
 /***********************************************************************
-Write a recursive function called `fibonacci` that takes an integer, `n`,
-and returns the `n`th number in the Fibonacci sequence.
+Write a recursive function called `sort` that takes an array of integers, `nums`
+and returns an array containing those integers sorted from least to greatest.
 
-Not familiar with the Fibonacci sequence? Beginning with 0 and 1, we add the two
-previous numbers in the sequence together to form the next one:
+Your function should accept a default argument called `sorted` which
+holds the currently sorted elements. Each recursive step should add
+the smallest number in the `nums` array to the end of `sorted`.
 
-0, 1, 1, 2, 3, 5, 8, etc....
+There are many ways to accomplish this task but here's a simple algorithm:
 
-We count Fibonacci numbers beginning with the first 1. Take a look at the
-examples below if you're unsure where to start!
+1. Check the base case: If `nums` is empty, then return `sorted`
+2. Otherwise, find the smallest element in `nums`
+3. Add the smallest element to the end of `sorted`
+4. Remove the smallest element from `nums`
+5. Recursively call `sort()` with updated `sorted` and `nums`
 
 Examples:
 
-fibonacci(1); // 1
-fibonacci(2); // 1
-fibonacci(3); // 2
-fibonacci(4); // 3
-fibonacci(10); // 55
+sort([4,1,6,3,1,7]); // [1, 1, 3, 4, 6, 7]
+sort([0, 1, -3]); // [-3, 0, 1]
+sort([]); // []
 ***********************************************************************/
 
-// your code here
-
-/**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
-try {
-    module.exports = fibonacci;
-  } catch (e) {
-    module.exports = null;
+function sort(nums, sorted = []) {
+    // your code here
   }

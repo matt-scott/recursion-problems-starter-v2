@@ -19,12 +19,31 @@ fibonacci(4); // 3
 fibonacci(10); // 55
 ***********************************************************************/
 
-// your code here
-  
+function fibonacci(n) {
+  if (n < 2){
+      return 1;
+  } else {
+      return fibonacci(n-2) + fibonacci(n-1);
+  }
+}
+
+function fibonacci (n, sequence = [0, 1]) {
+  debugger
+
+  if (n >= sequence.length) {
+      fibonacci(n - 1, sequence);
+  }
+
+  let lastIndex = sequence.length - 1;
+  let secondLastIndex = sequence.length - 2;
+  sequence.push(sequence[lastIndex] + sequence[secondLastIndex]);
+
+  return sequence[n];
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;
 } catch (e) {
   module.exports = null;
 }
-  
